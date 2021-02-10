@@ -152,74 +152,192 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Icons section -->
-            <div class="section-icon section white">
-                <div class="container">
-                    <div class="row">
-                        <div class="col m4 hide-on-small-only">
-                            <h5>Clients</h5>
+        </section>
+        
+        <!-- Icons section -->
+        <section class="section-icon section white">
+            <div class="container">
+                <div class="row">
+                    <div class="col m4 hide-on-small-only">
+                        <div class="row">
+                            <div class="col"><i class="material-icons large green-text">work_outline</i></div>
+                            <div class="col ml-2">
+                                <div class="row grey-darken-text"><h4>3000</h4></div>
+                                <div class="row grey-darken-text""><h6>Clients</h6></div>
+                            </div>
                         </div>
-                        <div class="col m4 hide-on-small-only""><h5>Emplyees</h5></div>
-                        <div class=" col m4 hide-on-small-only"">
-                            <h5>Users</h5>
+                        
+                    </div>
+                    <div class="col m4 hide-on-small-only">
+                        <div class="row">
+                            <div class="col"><i class="material-icons large green-text">face</i></div>
+                            <div class="col ml-2">
+                                <div class="row grey-darken-text">
+                                    <h4>180</h4>
+                                </div>
+                                <div class="row grey-darken-text""><h6>Employees</h6></div>
+                            </div>
                         </div>
                     </div>
+                    <div class="col m4 hide-on-small-only">
+                        <div class="row">
+                            <div class="col"><i class="material-icons large green-text">public</i></div>
+                            <div class="col ml-2">
+                                <div class="row grey-darken-text">
+                                    <h4>10000</h4>
+                                </div>
+                                <div class="row grey-darken-text""><h6>Daily Users</h6></div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
-                
             </div>
-            
             
         </section>
         
-        <br>
-        <br>
-        <br>
-        <br>
+        <!-- News section -->
+        <section class="section section-news grey lighten-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 center">
+                        <h4>Latest News</h4>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="grey-text">27.07.2016</p>
+                                <div>Liana Technologies and Encode merge to create unique mobile solutions.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="grey-text"> 27.07.2016</p>
+                                <div>From a global start up to a global player: Liana Technologies among the forerunners of digital marketing technologies.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="grey-text">27.07.2016</p>
+                                <div>Liana Technologies Hong Kong launched a series of digit marketing events in June</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </section>
         
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        
-        <script>
-            $(document).ready(function () {
-                $('.dropdown-button').dropdown({
-                    constrainWidth: false,
-                    hover: true,
-                    belowOrigin: true,
-                    alignment: 'left'
-                });
+        <!-- References section -->
+        <section class="section section-references white">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 center">
+                        <h4>References</h4>
+                    </div>
+                    <div class="col s6 m3">
+                        <div class="card small">
+                            <div class="card-image">
+                                <img class="img-responsive" src="./img/BOSCH.png">
+                            </div>
+                            <div class="card-content">
+                                <h5 class="center">Robert Bosch</h5>
+                                <p class="center grey-text">Bosch is a mutlinational engineering and electronics company</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6 m3">
+                        <div class="card small">
+                            <div class="card-image">
+                                <img class="img-responsive" src="./img/Body_shop.jpeg">
+                            </div>
+                            <div class="card-content">
+                                <h5 class="center">The Body Shop</h5>
+                                <p class="center grey-text">The Body Shop is a global beaty brand and it has more than 3000 stores in more than 60 countries.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6 m3">
+                        <div class="card small">
+                            <div class="card-image">
+                                <img class="img-responsive" src="./img/lapland_hotels.jpg">
+                            </div>
+                            <div class="card-content">
+                                <h5 class="center">Lapland Hotels</h5>
+                                <p class="center grey-text">Lapland Hotels is the larget and the most diverse hotel chain in Lapland.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6 m3">
+                        <div class="card small">
+                            <div class="card-image">
+                                <img  class="img-responsive"src="./img/Ikea.png" >
+                            </div>
+                            <div class="card-content">
+                                <h5 class="center">IKEA</h5>
+                                <p class="center grey-text">IKEA is a multinational furniture shop.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
                 
-                // JAVASCRIPT START HERE //
-                
-                //Side nav INIT
-                $('.button-collapse').sideNav();
-                
-                // INIT SELECT LIST
-                $('select').material_select();
-                
-                INIT parallax
-                $('.parallax').parallax();
-                
-                //adds sticky class on scroll 
-                $(window).scroll(function(){
-                    var scroll = $(window).scrollTop();
-                    if(scroll>0){
-                        $('#main-nav').addClass('sticky')
-                    }else{
-                        $('#main-nav').removeClass('sticky')
+            </section>
+            
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <script type="text/javascript" src="js/materialize.min.js"></script>
+            
+            <script>
+                $(document).ready(function () {
+                    $('.dropdown-button').dropdown({
+                        constrainWidth: false,
+                        hover: true,
+                        belowOrigin: true,
+                        alignment: 'left'
+                    });
+                    
+                    // JAVASCRIPT START HERE //
+                    
+                    //Side nav INIT
+                    $('.button-collapse').sideNav();
+                    
+                    // INIT SELECT LIST
+                    $('select').material_select();
+                    
+                    // INIT parallax
+                    $('.parallax').parallax();
+                    
+                    //adds sticky class on scroll 
+                    $(window).scroll(function(){
+                        var scroll = $(window).scrollTop();
+                        if(scroll>0){
+                            $('#main-nav').addClass('sticky')
+                        }else{
+                            $('#main-nav').removeClass('sticky')
+                        }
+                    })
+                    
+                    // scrollFire
+                    const options=[
+                    {
+                        selector: '#main-text', offset:0, callback: function(el){
+                            Materialize.fadeInImage($(el));
+                        } 
                     }
-                })
-                
-                // scrollFire
-                const options=[
-                {
-                    selector: '#main-text', offset:0, callback: function(el){
-                        Materialize.fadeInImage($(el));
-                    } 
-                }
-                ];
-                Materialize.scrollFire(options);
-            });
-        </script>
-    </body>
-    </html>
+                    ];
+                    Materialize.scrollFire(options);
+                });
+            </script>
+        </body>
+        </html>
