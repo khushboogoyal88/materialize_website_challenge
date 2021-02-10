@@ -84,11 +84,12 @@ nav ul a {
     background: url(../img/computer.jpeg);
     background-size: cover;
     background-position: center;
-    min-height: 500px;
+    min-height: 400px;
     color: white;
     padding-top: 100px;
     font-family: 'Nunito Sans', sans-serif;
 }
+
 
 /* Hero banner styling ends here */
 
@@ -155,7 +156,11 @@ nav ul a {
     font-size: .70rem;
     padding-bottom: .8rem;
 }
+
 /* References section */
+.section-references {
+    border-bottom: 1px solid grey;
+}
 .section-references h4{
     padding: 20px;
 }
@@ -188,4 +193,55 @@ nav ul a {
     object-fit: contain;
     padding: 2rem;
     border-bottom: 1px solid grey;
+}
+
+.section-references h5{
+    margin-top: 0px;
+}
+
+/* Newsletter */
+
+.section-newsletter input{
+    border: 1px solid grey !important;
+    border-radius: 5px !important;
+    font-size: 18px !important;
+}
+
+.section-newsletter input::placeholder{
+    padding: 1rem;
+    color: grey;
+}
+
+.section-newsletter p {
+    line-height: 0.5;
+}
+
+.section-newsletter .btn {
+    margin-top: 15px;
+    height: 45px;
+    padding: 5px;
+    
+}
+
+#social-media-icons{
+    display: flex;
+    flex-direction: row;
+}
+
+.social-icon{
+    border-radius: 50%;
+    margin: .75rem;
+}
+
+.page-footer .row{
+    position: relative;
+}
+
+.page-footer .row{
+    position: relative;
+}
+
+.page-footer .contactBtn{
+    position: absolute;
+    bottom: 5px;
 }
