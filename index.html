@@ -49,13 +49,13 @@
             <div class="container ">
                 <div class="nav-wrapper">
                     <div class="row">
-                        <div class="col m1 s12">
-                            <a href="#" class="brand-logo black-text">Logo</a>
+                        <div class="col m2 s12">
+                            <a href="#" class="brand-logo"><img src="./img/liana-technologies-logo-2018.png" alt=""></a>
                             <a class="button-collapse black-text" data-activates="mobile-nav" href="#">
                                 <i class="material-icons">menu</i>
                             </a>
                         </div>
-                        <div class="col m6 s12">
+                        <div class="col m5 s12">
                             <ul class="hide-on-med-and-down">
                                 <li><a href="#" class="grey-text">Company</a></li>
                                 <li><a href="#!" class="grey-text">Products</a></li>
@@ -98,6 +98,7 @@
         <!-- Main nav ends here -->
         
         <!-- Showcase starts here -->
+        
         <div class="hero-banner">
             <div class="container ">
                 <div class="row">
@@ -107,42 +108,118 @@
                     </div>
                 </div>
             </div>
-        </div>
+            
+            <!-- Showcase ends here -->
+        </header>
         
-        <!-- Showcase starts here -->
-    </header>
-    <main>
+        <!-- Section: about -->
+        <br>
+        <br>
+        <br>
+        <br>
+        <section clas="section section-about center ">
+            <div class="container white">
+                <div class="row">
+                    <div class="col s12 m4 ">
+                        <div class="card-panel">
+                            <div class="image-overlay  ">
+                                <img src="./img/Team.jpeg" />
+                                <a href="#" class=" after white-text">
+                                    <h5>Company</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class=" card-panel">
+                            <div class="image-overlay">
+                                <img src="./img/Team2.jpeg" />
+                                <a href="#" class=" after white-text">
+                                    <h5>Products</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class=" card-panel">
+                            <div class="image-overlay">
+                                <img src="./img/Team3.jpeg" />
+                                <a href="#" class=" after white-text">
+                                    <h5>Services</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Icons section -->
+            <div class="section-icon section white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col m4 hide-on-small-only">
+                            <h5>Clients</h5>
+                        </div>
+                        <div class="col m4 hide-on-small-only""><h5>Emplyees</h5></div>
+                        <div class=" col m4 hide-on-small-only"">
+                            <h5>Users</h5>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+        </section>
         
+        <br>
+        <br>
+        <br>
+        <br>
         
-    </main>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    
-    <script>
-        $(document).ready(function () {
-            $('.dropdown-button').dropdown({
-                constrainWidth: false,
-                hover: true,
-                belowOrigin: true,
-                alignment: 'left'
-            });
-            
-            // JAVASCRIPT START HERE //
-            
-            $('.button-collapse').sideNav();
-            
-            // INIT SELECT LIST
-            $('select').material_select();
-            
-            $(window).scroll(function(){
-                var scroll = $(window).scrollTop();
-                if(scroll>0){
-                    $('#main-nav').addClass('sticky')
-                }else{
-                    $('#main-nav').removeClass('sticky')
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        
+        <script>
+            $(document).ready(function () {
+                $('.dropdown-button').dropdown({
+                    constrainWidth: false,
+                    hover: true,
+                    belowOrigin: true,
+                    alignment: 'left'
+                });
+                
+                // JAVASCRIPT START HERE //
+                
+                //Side nav INIT
+                $('.button-collapse').sideNav();
+                
+                // INIT SELECT LIST
+                $('select').material_select();
+                
+                INIT parallax
+                $('.parallax').parallax();
+                
+                //adds sticky class on scroll 
+                $(window).scroll(function(){
+                    var scroll = $(window).scrollTop();
+                    if(scroll>0){
+                        $('#main-nav').addClass('sticky')
+                    }else{
+                        $('#main-nav').removeClass('sticky')
+                    }
+                })
+                
+                // scrollFire
+                const options=[
+                {
+                    selector: '#main-text', offset:0, callback: function(el){
+                        Materialize.fadeInImage($(el));
+                    } 
                 }
-            })
-        });
-    </script>
-</body>
-</html>
+                ];
+                Materialize.scrollFire(options);
+            });
+        </script>
+    </body>
+    </html>

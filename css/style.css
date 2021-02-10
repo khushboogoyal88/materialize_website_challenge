@@ -10,11 +10,15 @@ body{
     text-transform: none;
     font-size: 1.2rem;
 }
+
+.pt-5{
+    padding-top: 50px;
+}
 /* Nav Bar styling */
 
 #searchBar form{
     margin: 1rem;
-    width: 10rem;
+    width: 8rem;
     background-color: white;
     border: 1px solid grey;
     border-radius: 5px;
@@ -46,12 +50,19 @@ body{
 
 #main-nav{
     height: 80px;
+    z-index: 10;
 }
 
 #main-nav .nav-wrapper{
     padding-top: 10px;
+    
 }
 
+#main-nav img{
+    height:40px;
+    width: 100px;
+    margin: -10px;
+}
 nav ul a.btn{
     margin-left: 0px;
 }
@@ -73,10 +84,58 @@ nav ul a {
     background: url(../img/computer.jpeg);
     background-size: cover;
     background-position: center;
-    min-height: 600px;
+    min-height: 500px;
     color: white;
     padding-top: 100px;
     font-family: 'Nunito Sans', sans-serif;
 }
 
 /* Hero banner styling ends here */
+
+/* About section styling */
+
+.card-panel{
+    padding: 0px !important;
+}
+
+.image-overlay img{
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width:100%;
+    padding:0;
+}
+
+.image-overlay {
+    position: relative;
+    height: 100%;
+    width:100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-overlay .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    color: #FFF;
+    display: block;
+    background: rgba(0, 0, 0, .3);
+}
+
+.image-overlay .after h5{
+    margin: 0;
+    position: absolute;               /* 2 */
+    top: 50%;      
+    left: 50%;                    
+    transform: translate(-50%, -50%)
+}
+
+/* Icon secton  */
+.section-icon{
+    margin: 80px;
+}
