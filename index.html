@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" /
+    
+    <!-- CDN to font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>Marketing & PR Technology Stack | Liana Technologies</title>
+</head>
+<body>
+    <!-- Header starts here -->
+    <header class="main-header">
+        <nav class="green">
+            <div class="container">
+                <div class="nav-content right">
+                    <ul>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Intranet</a></li>
+                        <li id="languageSelect">
+                            <a class="dropdown-button grey-text white-text btn" data-activates="language-dropdown" href="#"> In English <i class="material-icons right">arrow_drop_down</i></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+        
+        <ul id="language-dropdown" class="dropdown-content">
+            <li><a href="#">Suomeksi</a></li>
+            <li><a href="#">In Swedish</a></li>
+            <li><a href="#">Pä Svenska </a></li>
+        </ul>
+        
+        <!-- Main nav starts here -->
+        <nav class="white" id="main-nav">
+            <div class="container ">
+                <div class="nav-wrapper">
+                    <div class="row">
+                        <div class="col m1 s12">
+                            <a href="#" class="brand-logo black-text">Logo</a>
+                            <a class="button-collapse black-text" data-activates="mobile-nav" href="#">
+                                <i class="material-icons">menu</i>
+                            </a>
+                        </div>
+                        <div class="col m6 s12">
+                            <ul class="hide-on-med-and-down">
+                                <li><a href="#" class="grey-text">Company</a></li>
+                                <li><a href="#!" class="grey-text">Products</a></li>
+                                <li><a class="dropdown-button grey-text" data-activates="contact-dropdown" href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col m5 s12">
+                            <ul class="right hide-on-med-and-down">
+                                <li id="searchBar">
+                                    <form>
+                                        <div class="input-field">
+                                            <input id="search" type="search" required placeholder="Search">
+                                        </div>
+                                    </form>
+                                </li>
+                                <!--Search BUTTON LINK -->
+                                <li><a class="btn waves-effect waves-light green">Search</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- side nav bar -->
+                    <ul class="side-nav" id="mobile-nav">
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- DROPDOWN MENU -->
+        <ul id="contact-dropdown" class="dropdown-content">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Board of Directors</a></li>
+            <li><a href="#">Management</a></li>
+        </ul>
+        
+        
+        <!-- Main nav ends here -->
+    </header>
+    <main>
+        
+        
+    </main>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-button').dropdown({
+                constrainWidth: false,
+                hover: true,
+                belowOrigin: true,
+                alignment: 'left'
+            });
+            
+            // JAVASCRIPT START HERE //
+            
+            $('.button-collapse').sideNav();
+            
+            // INIT SELECT LIST
+            $('select').material_select();
+            
+            
+        });
+    </script>
+</body>
+</html>
