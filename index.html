@@ -96,6 +96,20 @@
         
         
         <!-- Main nav ends here -->
+        
+        <!-- Showcase starts here -->
+        <div class="hero-banner">
+            <div class="container ">
+                <div class="row">
+                    <div class="col s12 m10 offset-m1 center">
+                        <h1 id="main-text">Software fueling digital marketing</h1>
+                        <a href="#" class="btn btn-large green white-text">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Showcase starts here -->
     </header>
     <main>
         
@@ -120,7 +134,14 @@
             // INIT SELECT LIST
             $('select').material_select();
             
-            
+            $(window).scroll(function(){
+                var scroll = $(window).scrollTop();
+                if(scroll>0){
+                    $('#main-nav').addClass('sticky')
+                }else{
+                    $('#main-nav').removeClass('sticky')
+                }
+            })
         });
     </script>
 </body>

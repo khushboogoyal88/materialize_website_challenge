@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Roboto&display=swap');
+
+/* Global Styling */
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn{
+    text-transform: none;
+    font-size: 1.2rem;
+}
 /* Nav Bar styling */
 
 #searchBar form{
@@ -30,7 +42,6 @@
     border-radius: 5px;
     background-color: white;
     color: black !important;
-    text-transform: none;
 }
 
 #main-nav{
@@ -45,4 +56,27 @@ nav ul a.btn{
     margin-left: 0px;
 }
 
+nav ul a {
+    font-size: 1.2rem;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 /* Nav bar Styling ends here */
+
+/* Hero banner styling starts here */
+
+.hero-banner{
+    background: url(../img/computer.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+    color: white;
+    padding-top: 100px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Hero banner styling ends here */
