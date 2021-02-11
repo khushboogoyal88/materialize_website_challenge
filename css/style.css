@@ -79,16 +79,14 @@ nav ul a {
 /* Nav bar Styling ends here */
 
 /* Hero banner styling starts here */
-/* 
-.hero-banner{
-    background: url(../img/computer.jpeg);
-    background-size: cover;
-    background-position: center;
-    min-height: 400px;
+.caption{
+    position: absolute;
+    top: 30%;
+    left:0%;
+    font-size: 4rem;
+    letter-spacing: 2px;
     color: white;
-    padding-top: 100px;
-    font-family: 'Nunito Sans', sans-serif;
-} */
+}
 
 
 /* Hero banner styling ends here */
@@ -223,6 +221,12 @@ nav ul a {
     
 }
 
+input[type=email]{
+    padding-left: 10px !important;
+    margin: 0 0 20px -10px !important;
+}
+
+/* footer */
 #social-media-icons{
     display: flex;
     flex-direction: row;
@@ -246,11 +250,16 @@ nav ul a {
     bottom: 5px;
 }
 
-.caption{
-    position: absolute;
-    top: 30%;
-    left:0%;
-    font-size: 4rem;
-    letter-spacing: 2px;
-    color: white;
+
+.card-panel:hover, .section-references .card:hover{
+    position: relative;
+    top: -5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal styling */
+
+#modal1 p{
+    padding-top: 20px;
+    font-size: 1.2rem;
 }

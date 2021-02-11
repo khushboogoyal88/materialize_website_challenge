@@ -309,18 +309,32 @@
                         <p class="center">Follow our story and get the latest promotional</p>
                         <p class="center"> news about our products and events</p>
                     </div>
-                    <div class="col m4 offset-m3 s12">
-                        <div class="input-field">
-                            <input class=" grey-text" placeholder="Your email address" type="text">
+                    <form class="col s12" id="newsletter-form">
+                        <div class="col m4 offset-m3 s12">
+                            <div class="input-field">
+                                <input class=" grey-text" placeholder="Your email address" type="email" required id="email" class="validate">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col m2 btn green s3 offset-s3">
-                        <div  value="submit">Subscribe</div>
-                    </div>
+                        <button class="col m2 btn green s3 offset-s3 btn waves-effect waves-light modal-trigger" type="submit" name="action" href="#modal1" >Subscribe</button>
+                        
+                    </form>
+                    
                 </div>
             </div>
         </section>
         
+        <!-- Thank you modal for subscription! -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4 class="center green-text">Thank you for Subscribing</h4>
+                <p class="center">You have been added to our mailing list and will now be among the first to hear about new arrivals, big events and special offers.</p>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+            </div>
+        </div>
+        
+        <!-- Footer -->
         <footer class="page-footer black">
             <div class="container">
                 <nav class="black">
@@ -391,16 +405,32 @@
                     }
                 })
                 
-                // scrollFire
-                const options=[
-                {
-                    selector: '#main-text', offset:0, callback: function(el){
-                        Materialize.fadeInImage($(el));
-                    } 
-                }
-                ];
-                Materialize.scrollFire(options);
-            });
-        </script>
-    </body>
-    </html>
+                //Form validation
+                $('select').material_select();
+                $("select[required]").css({
+                    display: "inline",
+                    height: 0,
+                    padding: 0,
+                    width: 0
+                });
+                
+                // Thank you modal after submission
+                // $('#newsletter-form.submit()').modal({
+                    //     dismissible: true,
+                    //     inDuration: 300,
+                    //     outDuration: 200
+                    // });
+                    
+                    // scrollFire
+                    const options=[
+                    {
+                        selector: '#main-text', offset:0, callback: function(el){
+                            Materialize.fadeInImage($(el));
+                        } 
+                    }
+                    ];
+                    Materialize.scrollFire(options);
+                });
+            </script>
+        </body>
+        </html>
