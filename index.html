@@ -7,6 +7,9 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
+    <!-- RSS feed link -->
+    <link rel="alternate" type="application/rss+xml" title="Blog – Digital Marketing | Liana Technologies" href="https://www.lianatech.com/resources/blog.rss" />
+    <link rel="alternate" type="application/atom+xml" title="Blog – Digital Marketing | Liana Technologies" href="https://www.lianatech.com/resources/blog.atom" />
     
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" /
@@ -24,7 +27,7 @@
 <body>
     <!-- Header starts here -->
     <header class="main-header">
-        <nav class="green">
+        <nav class="green hide-on-small-only">
             <div class="container">
                 <div class="nav-content right">
                     <ul>
@@ -97,8 +100,6 @@
             <li><a href="#">Management</a></li>
         </ul>
         
-        
-        <!-- Main nav ends here -->
         
         <!-- Showcase starts here -->
         
@@ -217,7 +218,7 @@
                     <div class="card">
                         <div class="card-content">
                             <p class="grey-text">27.07.2016</p>
-                            <div>Liana Technologies and Encode merge to create unique mobile solutions.</div>
+                            <div id="blog1"></div>
                         </div>
                     </div>
                 </div>
@@ -225,7 +226,7 @@
                     <div class="card">
                         <div class="card-content">
                             <p class="grey-text"> 27.07.2016</p>
-                            <div>From a global start up to a global player: Liana Technologies among the forerunners of digital marketing technologies.</div>
+                            <div id="blog2"></div>
                         </div>
                     </div>
                 </div>
@@ -233,7 +234,7 @@
                     <div class="card">
                         <div class="card-content">
                             <p class="grey-text">27.07.2016</p>
-                            <div>Liana Technologies Hong Kong launched a series of digit marketing events in June</div>
+                            <div id="blog3"></div>
                         </div>
                     </div>
                 </div>
@@ -414,23 +415,53 @@
                     width: 0
                 });
                 
-                // Thank you modal after submission
-                // $('#newsletter-form.submit()').modal({
-                    //     dismissible: true,
-                    //     inDuration: 300,
-                    //     outDuration: 200
-                    // });
+                // scrollFire
+                const options=[
+                {
+                    selector: '#main-text', offset:0, callback: function(el){
+                        Materialize.fadeInImage($(el));
+                    } 
+                }
+                ];
+                Materialize.scrollFire(options);
+                
+                
+                // Function for RSS feed grabing data and putting in HTML 
+                const RSS_URL = `https://www.lianatech.com/resources/blog.rss`;
+                
+                let blogs= [];
+                
+                
+                $.ajax(RSS_URL, {
+                    accepts: {
+                        xml: "application/rss+xml"
+                    },
                     
-                    // scrollFire
-                    const options=[
-                    {
-                        selector: '#main-text', offset:0, callback: function(el){
-                            Materialize.fadeInImage($(el));
-                        } 
+                    dataType: "xml",
+                    
+                    success: function (data) {
+                        $(data)
+                        .find("item")
+                        .each(function () {
+                            const el = $(this);
+                            const template = `
+                            <a href="${el
+                                .find("link")
+                                .text()}" target="_blank" rel="noopener">
+                                <h6 class="black-text lighten center">${el.find("title").text()}</h6>
+                            </a>
+                            `;
+                            blogs.push(template);
+                            
+                            document.getElementById('blog1').innerHTML = blogs[0];
+                            document.getElementById('blog2').innerHTML = blogs[1];
+                            document.getElementById('blog3').innerHTML = blogs[2];
+                        });
                     }
-                    ];
-                    Materialize.scrollFire(options);
                 });
-            </script>
-        </body>
-        </html>
+                
+                
+            });
+        </script>
+    </body>
+    </html>

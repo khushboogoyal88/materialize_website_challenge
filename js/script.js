@@ -25,11 +25,15 @@ const email = document.getElementById('email');
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
     let visitor_email = email.value;
+    
     // Checks if array already exists, if not sets up an array of messages
     let emailArr = JSON.parse(localStorage.getItem('emailArr')) || [];
+    
     emailArr.push(visitor_email)
+    
     // Adds email address to the local storage
     localStorage.setItem('emailArr', JSON.stringify(emailArr));
+    
     // Clears fields after submission.
     document.getElementById('email').value='';
     
