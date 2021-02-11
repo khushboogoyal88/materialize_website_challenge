@@ -79,7 +79,7 @@ nav ul a {
 /* Nav bar Styling ends here */
 
 /* Hero banner styling starts here */
-
+/* 
 .hero-banner{
     background: url(../img/computer.jpeg);
     background-size: cover;
@@ -88,7 +88,7 @@ nav ul a {
     color: white;
     padding-top: 100px;
     font-family: 'Nunito Sans', sans-serif;
-}
+} */
 
 
 /* Hero banner styling ends here */
@@ -244,4 +244,13 @@ nav ul a {
 .page-footer .contactBtn{
     position: absolute;
     bottom: 5px;
+}
+
+.caption{
+    position: absolute;
+    top: 30%;
+    left:0%;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    color: white;
 }
