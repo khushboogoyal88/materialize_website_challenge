@@ -1,5 +1,6 @@
 const counters = document.querySelectorAll('.counter');
 
+// Function for incrementing numbers
 counters.forEach(counter=>{
     counter.innerText = '0'
     
@@ -20,8 +21,11 @@ counters.forEach(counter=>{
     
 })
 
+
+// Function to open modal at news letter supscription and save the email id in local storage
 const form = document.getElementById('newsletter-form');
 const email = document.getElementById('email');
+
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
     let visitor_email = email.value;

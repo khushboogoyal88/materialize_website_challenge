@@ -13,13 +13,21 @@ body{
 }
 
 .ml-2{
-    margin-left: 20px;
+    margin-left: 20px !important;
 }
 
 .card-panel:hover, .section-references .card:hover{
     position: relative;
     top: -5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.section-references h4, .section-newsletter h4{
+    padding: 20px;
+}
+
+.section-references p, .section-newsletter p, .page-footer p{
+    font-size: 18px;
 }
 
 /* Nav Bar styling */
@@ -76,7 +84,7 @@ nav ul a.btn{
 }
 
 nav ul a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .sticky {
@@ -84,9 +92,14 @@ nav ul a {
     top: 0;
     width: 100%;
 }
-/* Nav bar Styling ends here */
+
 
 /* Hero banner styling starts here */
+
+#hero-banner .parallax-container{
+    max-height: 450px;
+}
+
 .caption{
     position: absolute;
     top: 30%;
@@ -96,8 +109,10 @@ nav ul a {
     color: white;
 }
 
-
-/* Hero banner styling ends here */
+.caption a {
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 /* About section styling */
 
@@ -148,16 +163,31 @@ nav ul a {
 }
 
 /* Icon secton  */
-.section-icon{
-    margin: 50px 100px;
-}
-.section-icon h4{
-    margin: 0 0 -.5rem 0;
+
+.icon-container{
+    max-width: 850px;
 }
 
-.section-icon h6{
-    font-size: 18px;
+.material-icons{
+    line-height: 1.5;
 }
+
+.section-icon{
+    margin-bottom: 30px;
+}
+.section-icon .row{
+    margin-bottom: 10px !important;
+}
+
+.section-icon h3 {
+    margin: 1.46rem 0 0 0;
+    font-size: 3.7rem;
+}
+
+.section-icon h5 {
+    margin: 0 0 .656rem 0;
+}
+
 /* News Section */
 .section-news .card{
     height: 150px;
@@ -166,30 +196,31 @@ nav ul a {
     padding: 20px;
 }
 
-.section-news p{
-    font-size: .70rem;
+.section-news h5{
+    font-size: 1.3rem;
     padding-bottom: .8rem;
+}
+
+.section-news{
+    padding-bottom: 2rem !important;
 }
 
 /* References section */
 .section-references {
+    padding-bottom: 30px;
     border-bottom: 1px solid grey;
 }
-.section-references h4{
-    padding: 20px;
-}
+
 .section-references .card{
     box-shadow: 0 0 0 0;
     border: 1px solid grey;
     border-radius: 5px;
 }
 
-.section-references p{
-    font-size: 14px;
-}
+
 
 .section-references .card .card-content{
-    height: 150px;
+    height: 250px !important;
     overflow: hidden !important;
     padding: 16px!important;
 }
@@ -199,7 +230,7 @@ nav ul a {
 }
 
 .section-references img{
-    height: 150px;
+    height: 180px;
     width: 100%;
     display: block;
     background-size: cover;
@@ -209,10 +240,9 @@ nav ul a {
     border-bottom: 1px solid grey;
 }
 
-.section-references h5{
-    margin-top: 0px;
+.section-references .card.small {
+    height: 350px;
 }
-
 /* Newsletter */
 
 .section-newsletter input{
@@ -234,7 +264,6 @@ nav ul a {
     margin-top: 15px;
     height: 45px;
     padding: 5px;
-    
 }
 
 input[type=email]{
@@ -246,6 +275,10 @@ input[type=email]{
 
 #footer{
     padding-bottom: 100px !important;
+}
+
+#footer a.company-name{
+    font-size: 20px;
 }
 
 #social-media-icons{
@@ -275,4 +308,42 @@ input[type=email]{
 #modal1 p{
     padding-top: 20px;
     font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 993px){
+    .container {
+        width: 80%;
+    }
+}
+@media(max-width: 600px){
+    
+    .section-references p, .section-newsletter p, .page-footer p{
+        font-size: 16px;
+    }
+    .section-news{
+        margin-top: -50px !important;
+    }
+    
+    .section-newsletter .btn {
+        width: 200px !important;
+        margin-top: 0px;
+    }
+    .section-newsletter .row .col.offset-s3 {
+        margin-left: 18%;
+    }
+    
+    #footer *{
+        width: 100%;
+        text-align: center !important;
+    }
+    
+    #footer .container{
+        max-width: 250px;
+    }
+    
+    .page-footer .contactBtn{
+        position: static;
+        margin: 25px 10px 25px 10px !important;
+        
+    }
 }
