@@ -312,17 +312,43 @@ input[type=email]{
     font-size: 1.2rem;
 }
 
-@media only screen and (min-width: 993px) and (max-width:1100px){
+@media only screen and (max-width:1100px){
+    
+}
+
+@media only screen and (min-width: 750px) and (max-width:1100px){
     .container {
         width: 80%;
     }
     
-    .section-references .card .card-content{
-        height: 250px !important;
+    .section-news .card{
+        height: 200px;
+    }
+    
+    .section-references img{
+        height: 150px;
+        background-size: cover;
+        background-position: center;
+        object-fit: contain;
+        padding: 2rem;
+        border-bottom: 1px solid grey;
     }
     
     .section-references .card.small {
-        height: 450px;
+        height: 300px;
+    }
+    
+    .section-references .card .card-content{
+        height: 150px !important;
+        overflow: hidden !important;
+        padding: 10px!important;
+    }
+    .section-references h5{
+        font-size: 18px;
+    }
+    
+    .section-references p{
+        font-size: 16px;
     }
 }
 @media(max-width: 600px){
@@ -355,5 +381,30 @@ input[type=email]{
         position: static;
         margin: 25px 10px 25px 10px !important;
         
+    }
+    .section-references img{
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+        object-fit: contain;
+        padding: 2rem;
+        border-bottom: 1px solid grey;
+    }
+    
+    .section-references .card.small {
+        height: 250px;
+    }
+    
+    .section-references .card .card-content{
+        height: 150px !important;
+        overflow: hidden !important;
+        padding: 10px!important;
+    }
+    .section-references h5{
+        font-size: 14px;
+    }
+    
+    .section-references p{
+        font-size: 12px;
     }
 }

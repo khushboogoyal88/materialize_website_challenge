@@ -1,4 +1,4 @@
-A clone of static webiste as per a given design.
+# A clone of static webiste as per a given design.
 
 ### Stack used HTML/CSS/JS/jQuery
 
@@ -15,13 +15,13 @@ A clone of static webiste as per a given design.
 
 
 ### Other animations and features:
-1.Fade-in effect of main text at landing
-2.Mobile Menu
-3.Drop down Menu on hover for Language and Contact Us
-4.Sticky Navbar
-5.Hover effect on cards.
-6.Basic form validation to check the email id
-7.The email address is then saved to Local Storage in an array of emailIDs.
+1. Fade-in effect of main text at landing
+2. Mobile Menu
+3. Drop down Menu on hover for Language and Contact Us
+4. Sticky Navbar
+5. Hover effect on cards.
+6. Basic form validation to check the email id
+7. The email address is then saved to Local Storage in an array of emailIDs.
 > the same can be checked using the local storage memory in applications.
 
 
